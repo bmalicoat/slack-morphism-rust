@@ -47,16 +47,19 @@ pub struct SlackChannelDetails {
 #[skip_serializing_none]
 #[derive(Debug, PartialEq, Clone, Serialize, Deserialize, Builder)]
 pub struct SlackChannelFlags {
+    pub is_archived: Option<bool>,
     pub is_channel: Option<bool>,
+    pub is_ext_shared: Option<bool>,
+    pub is_general: Option<bool>,
     pub is_group: Option<bool>,
     pub is_im: Option<bool>,
-    pub is_archived: Option<bool>,
-    pub is_general: Option<bool>,
-    pub is_shared: Option<bool>,
-    pub is_org_shared: Option<bool>,
     pub is_member: Option<bool>,
-    pub is_private: Option<bool>,
     pub is_mpim: Option<bool>,
+    pub is_org_shared: Option<bool>,
+    pub is_pending_ext_shared: Option<bool>,
+    pub is_private: Option<bool>,
+    pub is_read_only: Option<bool>,
+    pub is_shared: Option<bool>,
     pub is_user_deleted: Option<bool>,
 }
 
