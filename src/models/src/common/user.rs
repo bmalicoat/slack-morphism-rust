@@ -21,6 +21,7 @@ pub struct SlackUser {
     pub deleted: Option<bool>,
     pub color: Option<SlackColor>,
     pub real_name: Option<String>,
+    pub display_name: Option<String>,
 }
 
 #[skip_serializing_none]
