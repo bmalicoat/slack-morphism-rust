@@ -21,6 +21,7 @@ pub struct SlackChannelInfo {
     pub priority: Option<SlackChannelPriority>,
     pub num_members: Option<u64>,
     pub locale: Option<SlackLocale>,
+    pub conversation_host_id: Option<String>,
     #[serde(flatten)]
     pub flags: SlackChannelFlags,
     #[serde(flatten)]
