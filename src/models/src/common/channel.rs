@@ -22,6 +22,7 @@ pub struct SlackChannelInfo {
     pub num_members: Option<u64>,
     pub locale: Option<SlackLocale>,
     pub conversation_host_id: Option<String>,
+    pub user: Option<SlackUserId>,
     #[serde(flatten)]
     pub flags: SlackChannelFlags,
     #[serde(flatten)]
