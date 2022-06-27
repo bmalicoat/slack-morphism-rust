@@ -459,6 +459,13 @@ pub struct SlackBlockConversationsSelectElement {
     pub default_to_current_conversation: Option<bool>,
     pub confirm: Option<SlackBlockConfirmItem>,
     pub response_url_enabled: Option<bool>,
+    pub filter: SlackBlockConversationsSelectFilter,
+}
+
+#[derive(Debug, PartialEq, Clone, Serialize, Deserialize, Builder)]
+pub struct SlackBlockConversationsSelectFilter {
+    pub include: Vec<String>,
+    pub exclude_bot_users: bool
 }
 
 impl From<SlackBlockConversationsSelectElement> for SlackSectionBlockElement {
